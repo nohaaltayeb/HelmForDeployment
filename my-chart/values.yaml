@@ -1,0 +1,14 @@
+deployment:
+  replicaCount: 1
+container:
+  name : "my-app"
+  port: 8000
+image:
+  name: "nohaaltayeb/helm:firsttry"
+service:
+  name: "helm-service"
+  type: "NodePort"
+  nodePort: 30000
+  targetPort: 8000
+pod:
+  label : "my-pod"
